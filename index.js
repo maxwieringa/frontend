@@ -1,5 +1,7 @@
+// Variabel dat de div met de ID progress selecteerd voor een progress bar met scrollen.
 let bar = document.querySelector("#progress");
 
+// Deze functies togglen de bio's zichtbaarheid en veranderd de afbeelding bij de button
 function toggleBio1() {
   let bio = document.getElementById('jebeckyBio');
   let button = document.getElementById('button1').src;
@@ -44,11 +46,14 @@ function toggleBio4() {
   }
 }
 
+
+// Deze eventlistener en functie veranderd de breedte van de progress bar met een rekensom
 window.addEventListener("scroll", () => {
   let max = document.body.scrollHeight - innerHeight;
   bar.style.width = `${(pageYOffset / max) * 100}%`;
 });
 
+// Evenlisteners voor de buttons bij de matches
 document.getElementById('button1').addEventListener("click", toggleBio1);
 document.getElementById('button2').addEventListener("click", toggleBio2);
 document.getElementById('button3').addEventListener("click", toggleBio3);
